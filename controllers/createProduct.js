@@ -1,4 +1,3 @@
-//createProduct
 const {
   setAllProductsValidation,
 } = require('../validation/setAllProductsValidation');
@@ -6,7 +5,7 @@ const {
 const Product = require('../models/productModel');
 
 //POST/product
-async function setAllProducts(props) {
+async function createProduct(props) {
   console.log(props);
 
   setAllProductsValidation(props);
@@ -16,4 +15,4 @@ async function setAllProducts(props) {
   return response;
 }
 
-module.exports = setAllProducts;
+module.exports = createProduct;
