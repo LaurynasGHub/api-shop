@@ -14,7 +14,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-//GET /product/:id
+//GET /product/:id dvitaskis reiskia kad id yra kintama reiksme, jei butu tiesiog id tai ir nueitu i /id kelia
 router.get('/:id', async (req, res) => {
   try {
     const data = await getProductById(req.params.id);

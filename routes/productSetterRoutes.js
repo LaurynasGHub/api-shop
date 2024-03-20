@@ -21,10 +21,11 @@ router.post('/', async (req, res) => {
 //sitoj vietoj sukuriamas/gaunamas kelias, siuo atveju po adreso ten https:/.../id <- id cia yra kazkokio produkto id
 router.patch('/:id', async (req, res) => {
   //updated description
-  let updateDesc = 'naujas, paupdatintas description';
+  // let updateDesc = 'naujas, asdjaudwawdoawd description';
+  let updateDesc = '';
 
   try {
-    const data = await updateProduct(req.params.id, updateDesc);
+    const data = await updateProduct(req.params.id, updateDesc, req.body);
 
     res.json(data);
   } catch (error) {
