@@ -8,12 +8,12 @@ route returns array of **products**
 
 [
 <br>
-{
+-{
 <br>
-"id": object id,
-"title": product title, //string
-"description": product description //string
+--"id": object id,<br>
+--"title": product title, //string<br>
+--"description": product description //string<br>
 <br>
-}
+-}
 <br>
 ]
