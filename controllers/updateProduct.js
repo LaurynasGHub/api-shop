@@ -6,9 +6,9 @@ const Product = require('../models/productModel');
 async function updateProduct(id, updateDesc, data) {
   updateProductValidation(id, data);
 
-  const response = await Product.findByIdAndUpdate(id, data {
+  const response = await Product.findByIdAndUpdate(id, data, {
     description: updateDesc,
-      new: true,
+    new: true,
   });
 
   return response;
