@@ -13,7 +13,7 @@ app.get('/', (req, res) => res.send('Express on Vercel'));
 
 //routes
 app.use('/product', require('./routes/productGetterRoutes'));
-app.use('/product', require('./routes/productSetterRoutes'));
+app.use('/product', require('./routes/productSetterRoutes'));           
 
 const connectDB = async () => {
   try {
