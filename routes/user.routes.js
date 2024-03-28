@@ -1,17 +1,27 @@
 const { Router } = require('express');
-const { registerUser } = require('../controllers');
+const { registerUser, logInUser } = require('../controllers');
 
 const router = Router();
 
-//GET /user
-
-router.get('/', async (req, res) => {
+// POST /user
+router.post('/', async (req, res) => {
   try {
-    const data = await registerUser();
-
-    res.json(data);
+    const data = await registerUser(req.body);
+    res.status(201).json(data);
   } catch (error) {
-    console.log('Error:', error.message);
+    console.log(`Error: ${error.message}`);
+    res.status(400).json({ error: error.message });
+  }
+});
+
+// POST /user/login
+
+router.post('/login', async (req, res) => {
+  try {
+    const data = await logInUser(req.body);
+    res.status(201).json(data);
+  } catch (error) {
+    console.log(`Error: ${error.message}`);
     res.status(400).json({ error: error.message });
   }
 });
