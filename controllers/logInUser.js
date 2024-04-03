@@ -16,7 +16,7 @@ async function logInUser({ username, password }) {
 
   //create token
   const token = jwt.sign({ username }, process.env.JWT_SECRET, {
-    expiresIn: '120s',
+    expiresIn: '2h',
   });
 
   //grazinam objekta del to skliaustai
